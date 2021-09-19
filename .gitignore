@@ -2,3 +2,4 @@ elm-stuff/
 node_modules/
 .history/
 .vscode/settings.json
+output/main.js
