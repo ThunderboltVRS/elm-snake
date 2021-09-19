@@ -6233,7 +6233,17 @@ var $author$project$Update$update = F2(
 						_Utils_update(
 							model,
 							{
-								state: _Utils_eq(model.state, $author$project$Types$Playing) ? $author$project$Types$Paused : $author$project$Types$Playing
+								state: function () {
+									var _v2 = model.state;
+									switch (_v2.$) {
+										case 'Playing':
+											return $author$project$Types$Paused;
+										case 'Paused':
+											return $author$project$Types$Playing;
+										default:
+											return model.state;
+									}
+								}()
 							}),
 						$elm$core$Platform$Cmd$none);
 				case 'ArrowLeft':

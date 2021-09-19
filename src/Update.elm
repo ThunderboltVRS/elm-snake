@@ -30,11 +30,10 @@ update msg model =
                     -- Space
                     ( { model
                         | state =
-                            if model.state == Playing then
-                                Paused
-
-                            else
-                                Playing
+                            case model.state of
+                               Playing -> Paused
+                               Paused -> Playing
+                               _ -> model.state
                       }
                     , Cmd.none
                     )
