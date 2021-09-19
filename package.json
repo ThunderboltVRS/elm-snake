@@ -1,0 +1,14 @@
+{
+  "name": "elm-snake",
+  "version": "1.0.0",
+  "description": "Snake made with Elm",
+  "main": "index.html",
+  "devDependencies": {
+    "elm-live": "4.0.2"
+  },
+  "scripts": {
+    "elm:live": "elm-live src/Main.elm --dir=output/ -- --output=output/main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
