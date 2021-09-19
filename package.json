@@ -4,10 +4,13 @@
   "description": "Snake made with Elm",
   "main": "index.html",
   "devDependencies": {
-    "elm-live": "4.0.2"
+    "elm-live": "4.0.2",
+    "elm-minify": "2.0.4"
   },
   "scripts": {
-    "elm:live": "elm-live src/Main.elm --dir=output/ -- --output=output/main.js"
+    "elm:live": "elm-live src/Main.elm --dir=output/ -- --output=output/main.js",
+    "preelm:release":"elm make src/Main.elm --optimize --output=output/main.js",
+    "elm:release": "elm-minify output/main.js"
   },
   "author": "",
   "license": "ISC"

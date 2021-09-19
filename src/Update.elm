@@ -198,7 +198,9 @@ move model =
         { model | state = HitWall }
 
     else if isEatingFood then
-        { model | snake = newSnake } |> updateForFood
+        { model | snake = newSnake
+        , previousDirection = model.direction }
+        |> updateForFood
 
     else
         { model

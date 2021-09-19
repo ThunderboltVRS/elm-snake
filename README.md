@@ -3,7 +3,7 @@
 
 ## Live Demo
 
-[](https://thunderboltvrs.github.io/elm-snake/output/index.html)
+[Live Demo](https://thunderboltvrs.github.io/elm-snake/output/demo.html)
 
 
 
